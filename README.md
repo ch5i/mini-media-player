@@ -354,6 +354,17 @@ If you don't have Sonos, but want just a bit more control over playlists and so,
 
 Remember to add the [required data](https://github.com/fondberg/spotcast#call-the-service), for spotcast to work. Also, kindly note that the [spotcast](https://github.com/fondberg/spotcast) custom component is required, for this to work. It's available in HACS.
 
+
+**Tip**:
+If you use Sonos, you can add shortcut items from Sonos' favorites like this:
+```yaml
+   - name: Energy Radio
+     icon: mdi:radio
+     type: favorite_item_id
+     id: FV:2/7
+```
+The IDs ("FV 2/7") are shown in the 'sensor.sonos_favorites' entity (added by the Sonos integration - the entity needs to be manually enabled (disabled by default).
+
 #### Grouped cards
 Set the `group` option to `true` when nesting mini media player cards inside other cards that already have margins/paddings.
 
